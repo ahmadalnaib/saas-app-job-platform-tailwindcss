@@ -1,6 +1,6 @@
 <x-guest-layout>
 
-
+@include('partials.nav')
     <!-- Section 1 -->
     <section class="w-full bg-white">
 
