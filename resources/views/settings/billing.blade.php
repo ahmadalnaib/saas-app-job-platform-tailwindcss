@@ -9,12 +9,9 @@
 
     <div class="container mx-auto max-w-3xl  m-8 ">
 
-        @if (session('alert'))
-            <p>{{ session('alert') }}</p>
-        @endif
-
         {{--navabr--}}
         @include('settings.nav')
+
 
         <form action="{{ route('billing.save') }}" method="POST" enctype="multipart/form-data">
             @csrf

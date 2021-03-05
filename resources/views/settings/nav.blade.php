@@ -10,3 +10,4 @@
     </x-responsive-nav-link>
 
 </ul>
+@include('messages.success')

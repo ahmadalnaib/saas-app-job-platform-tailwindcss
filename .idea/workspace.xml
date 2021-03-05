@@ -3,10 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="9b27adb1-981b-4b83-8972-fd8a7533c8ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/DashboardController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/settings/billing.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings/billing.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/settings/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/settings/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/settings/security.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings/security.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,7 +169,7 @@
       <option name="presentableId" value="Default" />
       <updated>1614858590885</updated>
       <workItem from="1614858593359" duration="25950000" />
-      <workItem from="1614947916668" duration="8107000" />
+      <workItem from="1614947916668" duration="17818000" />
     </task>
     <servers />
   </component>
