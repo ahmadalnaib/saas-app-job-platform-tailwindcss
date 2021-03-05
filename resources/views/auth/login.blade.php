@@ -61,7 +61,6 @@
                                     {{ __('Log in') }}
                                 </x-button>
                             </div>
-                        </div>
                         </form>
                         <p class="w-full mt-4 text-sm text-center text-gray-500">Don't have an account? <a href="{{route('register')}}" class="text-blue-500 underline">Sign up here</a></p>
                     </div>

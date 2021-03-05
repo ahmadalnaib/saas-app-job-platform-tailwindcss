@@ -15,8 +15,15 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <x-nav-link :href="route('profile')" :active="request()->routeIs('profile')">
+                        {{ __('Profile') }}
+                    </x-nav-link>
+
                 </div>
             </div>
+
+
 
             <!-- Settings Dropdown -->
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -66,6 +73,10 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
+
+            <x-responsive-nav-link :href="route('profile')" :active="request()->routeIs('profile')">
+                {{ __('Profile') }}
+            </x-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->
@@ -79,7 +90,7 @@
 
                 <div class="ml-3">
                     <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
-                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
+                    <div class="font-medium text-sm text-gray-500">{{ Auth::user()->name }}</div>
                 </div>
             </div>
 
