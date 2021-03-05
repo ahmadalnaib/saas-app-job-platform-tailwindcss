@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BillingController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -24,8 +25,8 @@ Route::group(['middleware'=>['auth','verified']],function (){
     Route::post('/settings/profile',[DashboardController::class,'profile_save'])->name('profile.save');
     Route::get('/settings/security',[DashboardController::class,'security'])->name('security');
     Route::post('/settings/security',[DashboardController::class,'security_save'])->name('security.save');
-    Route::get('/settings/billing',[DashboardController::class,'billing'])->name('billing');
-    Route::post('/settings/billing',[DashboardController::class,'billing_save'])->name('billing.save');
+    Route::get('/settings/billing',[BillingController::class,'billing'])->name('billing');
+    Route::post('/settings/billing',[BillingController::class,'billing_save'])->name('billing.save');
 });
 
 

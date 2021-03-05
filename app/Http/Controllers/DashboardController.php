@@ -57,13 +57,5 @@ class DashboardController extends Controller
         return back()->with('status','Successfully updated your password info');
     }
 
-    public function billing()
-    {
-         return view('settings.billing');
-    }
 
-    public function billing_save()
-    {
-        echo  'save';
-    }
 }
