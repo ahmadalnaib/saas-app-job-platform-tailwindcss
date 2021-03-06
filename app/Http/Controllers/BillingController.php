@@ -15,12 +15,18 @@ class BillingController extends Controller
     {
         $user=auth()->user();
         try {
-            $user->newSubscription(
-                'default', 'price_1IRlJeKrX08wOepqdwkJMh81'
-            )->create($request->payment_method);
+            if($user->subscribed('default')) {
+//update their credit card
+                $user->updateDefaultPaymentMethod($request->payment_method);
+            }else {
+
+                $user->newSubscription(
+                    'default', 'price_1IRlJeKrX08wOepqdwkJMh81'
+                )->create($request->payment_method);
+            }
 
         }catch(Exception $e) {
-            return back()->with('status','Some went wrong billing info');
+            return back()->with('error','Some went wrong billing info');
         }
         return back()->with('status','Successfully updated your billing info');
     }

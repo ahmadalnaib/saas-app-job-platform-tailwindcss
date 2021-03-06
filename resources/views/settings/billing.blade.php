@@ -21,6 +21,13 @@
                     <p class="text-xs text-gray-500">Update your billing info..</p>
                 </div>
                 <div class="md:w-2/3 w-full p-5">
+                    <div class="p-8">
+                        @if(auth()->user()->subscribed('default'))
+                            <div>Thank you for being a subscriber</div>
+                            <div class="text-xs text-blue-600">Your default payment method ends in {{auth()->user()->card_last_four}}</div>
+                            <div class="text-xs text-gray-500">To update your default payment method, add a new card below:</div>
+                            @endif
+                    </div>
                     <div class="p-8 ">
                         <label for="card-holder-name" class="text-sm text-gray-600">Name on Card</label>
                         <input class="mt-2 border-2 border-gray-200 px-3 py-2 block w-full rounded-lg text-base text-gray-900 focus:outline-none focus:border-indigo-500" type="text" value="" id="card-holder-name">
@@ -29,11 +36,10 @@
                     <div class="p-8 ">
                         <label for="name" class="text-sm text-gray-600">Credit Card</label>
                         <div id="card-element" class="mt-2 border-2 border-gray-200 px-3 py-2 block w-full rounded-lg text-base text-gray-900 focus:outline-none focus:border-indigo-500"></div>
-
+                        <div id="card-errors" class="text-red-600 text-bold mt-2 text-sm font-medium"></id>
                     </div>
 
-
-                    <x-button id="card-button" data-secret="{{ auth()->user()->createSetupIntent()->client_secret }}"  class="ml-3 mb-4 indigo-500 text-white text-sm font-medium px-6 py-2 rounded float-right uppercase cursor-pointer">
+                    <x-button id="card-button" data-secret="{{ auth()->user()->createSetupIntent()->client_secret }}"  class="ml-3 mt-4 mb-4 indigo-500 text-white text-sm font-medium px-6 py-2 rounded float-right uppercase cursor-pointer">
                         {{ __('Update Payment Method') }}
                     </x-button>
                     <hr class="border-gray-200">
@@ -74,6 +80,7 @@
             if (error) {
                 // Display "error.message" to the user...
                 cardButton.disabled=false
+                cardError.textContent=error.message;
 
             } else {
                 // The card has been verified successfully...
