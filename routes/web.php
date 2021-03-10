@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Account\AccountController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionCancelController;
+use App\Http\Controllers\Account\Subscriptions\SubscriptionInvoiceController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionResumeController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\DashboardController;
@@ -52,13 +53,17 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Account','prefix'=
 
 //sub account
 Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','prefix'=>'subscriptions'],function (){
-
+//cancel sub
     Route::get('/account.subscriptions',[\App\Http\Controllers\Account\Subscriptions\SubscriptionController::class,'index'])->name('account.subscriptions');
     Route::get('/cancel',[SubscriptionCancelController::class,'index'])->name('account.subscriptions.cancel');
     Route::post('/cancel',[SubscriptionCancelController::class,'store']);
 //resume sub
     Route::get('/resume',[SubscriptionResumeController::class,'index'])->name('account.subscriptions.resume');
     Route::post('/resume',[SubscriptionResumeController::class,'store']);
+
+//    invoice
+    Route::get('/invoices',[SubscriptionInvoiceController::class,'index'])->name('account.subscriptions.invoices');
+    Route::get('/invoices/{id}',[SubscriptionInvoiceController::class,'show'])->name('account.subscriptions.invoice');
 });
 
 

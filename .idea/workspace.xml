@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9b27adb1-981b-4b83-8972-fd8a7533c8ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Account/Subscriptions/SubscriptionCancelController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Account/Subscriptions/SubscriptionCancelController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Account/Subscriptions/SubscriptionResumeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Account/Subscriptions/SubscriptionResumeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -188,7 +187,7 @@
       <workItem from="1615043604609" duration="22784000" />
       <workItem from="1615107673483" duration="31662000" />
       <workItem from="1615156842376" duration="373000" />
-      <workItem from="1615368138900" duration="6581000" />
+      <workItem from="1615368138900" duration="10801000" />
     </task>
     <servers />
   </component>

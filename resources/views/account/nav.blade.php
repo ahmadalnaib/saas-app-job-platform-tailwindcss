@@ -17,6 +17,11 @@
                      {{ __('Resume Subscription') }}
                  </x-responsive-nav-link>
              @endcan
+
+
+             <x-responsive-nav-link :href="route('account.subscriptions.invoices')" :active="request()->routeIs('account.subscriptions.invoices')">
+                 {{ __('Invoices') }}
+             </x-responsive-nav-link>
 @endif
 
 
