@@ -4,6 +4,7 @@ use App\Http\Controllers\Account\AccountController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionCancelController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionInvoiceController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionResumeController;
+use App\Http\Controllers\Account\Subscriptions\SubscriptionSwapController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Subscriptions\PlanController;
@@ -64,6 +65,10 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','pr
 //    invoice
     Route::get('/invoices',[SubscriptionInvoiceController::class,'index'])->name('account.subscriptions.invoices');
     Route::get('/invoices/{id}',[SubscriptionInvoiceController::class,'show'])->name('account.subscriptions.invoice');
+
+//    swap
+    Route::get('/swap',[SubscriptionSwapController::class,'index'])->name('account.subscriptions.swap');
+    Route::post('/swap',[SubscriptionSwapController::class,'store'])->name('account.subscriptions.swap');
 });
 
 

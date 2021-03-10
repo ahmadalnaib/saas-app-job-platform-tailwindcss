@@ -9,7 +9,7 @@
 
     <div class="container mx-auto max-w-3xl  m-8 ">
         {{--navabr--}}
-        @include('account.nav')
+
 
         <div class="w-full bg-white rounded-lg mx-auto mt-8 flex overflow-hidden rounded-b-none">
 

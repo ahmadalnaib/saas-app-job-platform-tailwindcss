@@ -17,23 +17,6 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
 
-                    <x-nav-link :href="route('profile')" :active="request()->routeIs('profile')">
-                        {{ __('Profile') }}
-                    </x-nav-link>
-
-
-                    <x-nav-link :href="route('subscriptions.plans')" :active="request()->routeIs('subscriptions.plans')">
-                        {{ __('Plans') }}
-                    </x-nav-link>
-
-
-                    <x-nav-link :href="route('account')" :active="request()->routeIs('account.index')">
-                        {{ __('Account') }}
-                    </x-nav-link>
-
-
-
-
 
                 </div>
             </div>
@@ -56,16 +39,65 @@
                     </x-slot>
 
                     <x-slot name="content">
+
+                        <x-responsive-nav-link :href="route('profile')" :active="request()->routeIs('profile')">
+                            {{ __('Profile') }}
+                        </x-responsive-nav-link>
+                        <x-responsive-nav-link :href="route('security')" :active="request()->routeIs('security')">
+                            {{ __('Security') }}
+                        </x-responsive-nav-link>
+
+
+                        <x-responsive-nav-link :href="route('subscriptions.plans')" :active="request()->routeIs('subscriptions.plans')">
+                            {{ __('Plan') }}
+                        </x-responsive-nav-link>
+
+                        <x-responsive-nav-link :href="route('account')" :active="request()->routeIs('account')">
+                            {{ __('Account') }}
+                        </x-responsive-nav-link>
+
+                        <x-responsive-nav-link :href="route('account.subscriptions')" :active="request()->routeIs('account.subscriptions')">
+                            {{ __('Subscription') }}
+                        </x-responsive-nav-link>
+                        @if(auth()->user()->subscribed())
+
+                            @can('cancel',auth()->user()->subscription('default'))
+
+                                <x-responsive-nav-link :href="route('account.subscriptions.cancel')" :active="request()->routeIs('account.subscriptions.cancel')">
+                                    {{ __('Cancel Subscription') }}
+                                </x-responsive-nav-link>
+
+                            @endcan
+
+                            @can('resume',auth()->user()->subscription('default'))
+                                <x-responsive-nav-link :href="route('account.subscriptions.resume')" :active="request()->routeIs('account.subscriptions.resume')">
+                                    {{ __('Resume Subscription') }}
+                                </x-responsive-nav-link>
+                            @endcan
+
+
+                            <x-responsive-nav-link :href="route('account.subscriptions.invoices')" :active="request()->routeIs('account.subscriptions.invoices')">
+                                {{ __('Invoices') }}
+                            </x-responsive-nav-link>
+
+
+                            <x-responsive-nav-link :href="route('account.subscriptions.swap')" :active="request()->routeIs('account.subscriptions.swap')">
+                                {{ __('Swap Plans') }}
+                            </x-responsive-nav-link>
+                        @endif
+
+
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
                             <x-dropdown-link :href="route('logout')"
-                                    onclick="event.preventDefault();
+                                             onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log out') }}
                             </x-dropdown-link>
                         </form>
+
                     </x-slot>
                 </x-dropdown>
             </div>
@@ -85,13 +117,10 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
-            </x-responsive-nav-link>
 
-            <x-responsive-nav-link :href="route('profile')" :active="request()->routeIs('profile')">
-                {{ __('Profile') }}
-            </x-responsive-nav-link>
+
+
+
         </div>
 
         <!-- Responsive Settings Options -->
@@ -110,16 +139,67 @@
             </div>
 
             <div class="mt-3 space-y-1">
-                <!-- Authentication -->
+                <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{ __('Dashboard') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link :href="route('profile')" :active="request()->routeIs('profile')">
+                    {{ __('Profile') }}
+                </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('security')" :active="request()->routeIs('security')">
+                    {{ __('Security') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link :href="route('account.subscriptions')" :active="request()->routeIs('account.subscriptions')">
+                    {{ __('Subscription') }}
+                </x-responsive-nav-link>
+
+
+                <x-responsive-nav-link :href="route('subscriptions.plans')" :active="request()->routeIs('subscriptions.plans')">
+                    {{ __('Plan') }}
+                </x-responsive-nav-link>
+
+                <x-responsive-nav-link :href="route('account')" :active="request()->routeIs('account')">
+                    {{ __('Account') }}
+                </x-responsive-nav-link>
+
+                @if(auth()->user()->subscribed())
+
+                    @can('cancel',auth()->user()->subscription('default'))
+
+                        <x-responsive-nav-link :href="route('account.subscriptions.cancel')" :active="request()->routeIs('account.subscriptions.cancel')">
+                            {{ __('Cancel Subscription') }}
+                        </x-responsive-nav-link>
+
+                    @endcan
+
+                    @can('resume',auth()->user()->subscription('default'))
+                        <x-responsive-nav-link :href="route('account.subscriptions.resume')" :active="request()->routeIs('account.subscriptions.resume')">
+                            {{ __('Resume Subscription') }}
+                        </x-responsive-nav-link>
+                    @endcan
+
+
+                    <x-responsive-nav-link :href="route('account.subscriptions.invoices')" :active="request()->routeIs('account.subscriptions.invoices')">
+                        {{ __('Invoices') }}
+                    </x-responsive-nav-link>
+
+
+                    <x-responsive-nav-link :href="route('account.subscriptions.swap')" :active="request()->routeIs('account.subscriptions.swap')">
+                        {{ __('Swap Plans') }}
+                    </x-responsive-nav-link>
+                @endif
+            <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">
                     @csrf
 
                     <x-responsive-nav-link :href="route('logout')"
-                            onclick="event.preventDefault();
+                                           onclick="event.preventDefault();
                                         this.closest('form').submit();">
                         {{ __('Log out') }}
                     </x-responsive-nav-link>
                 </form>
+
             </div>
         </div>
     </div>

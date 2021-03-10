@@ -3,7 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="9b27adb1-981b-4b83-8972-fd8a7533c8ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/account/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/subscriptions/cancel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/subscriptions/cancel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/subscriptions/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/subscriptions/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/subscriptions/invoice.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/subscriptions/invoice.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/account/subscriptions/resume.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/subscriptions/resume.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/settings/profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings/profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/settings/security.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/settings/security.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subscriptions/checkout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subscriptions/checkout.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/subscriptions/plans.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/subscriptions/plans.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -163,6 +174,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\sassdun\app\Http\Controllers\Account\Subscriptions" />
       <recent name="C:\xampp\htdocs\sassdun\resources\views\account\subscriptions" />
     </key>
   </component>
@@ -187,7 +199,7 @@
       <workItem from="1615043604609" duration="22784000" />
       <workItem from="1615107673483" duration="31662000" />
       <workItem from="1615156842376" duration="373000" />
-      <workItem from="1615368138900" duration="10801000" />
+      <workItem from="1615368138900" duration="19399000" />
     </task>
     <servers />
   </component>

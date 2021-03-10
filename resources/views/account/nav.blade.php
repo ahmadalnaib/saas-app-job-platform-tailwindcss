@@ -22,8 +22,17 @@
              <x-responsive-nav-link :href="route('account.subscriptions.invoices')" :active="request()->routeIs('account.subscriptions.invoices')">
                  {{ __('Invoices') }}
              </x-responsive-nav-link>
+
+
+             <x-responsive-nav-link :href="route('account.subscriptions.swap')" :active="request()->routeIs('account.subscriptions.swap')">
+                 {{ __('Swap Plans') }}
+             </x-responsive-nav-link>
 @endif
 
 
 </ul>
 @include('messages.success')
+
+
+
+

@@ -9,8 +9,7 @@
 
     <div class="container mx-auto max-w-3xl  m-8 ">
 
-{{--navabr--}}
-      @include('settings.nav')
+
 
         <form action="{{ route('profile.save') }}" method="POST" enctype="multipart/form-data">
          @csrf

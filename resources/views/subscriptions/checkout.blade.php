@@ -13,10 +13,7 @@
                 <form id="card-form" action="{{route('subscriptions.store')}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="w-full bg-white rounded-lg mx-auto mt-8 flex overflow-hidden rounded-b-none">
-                        <div class="w-1/3 bg-gray-100 p-8 hidden md:inline-block">
-                            <h2 class="font-medium text-md text-gray-700 mb-4 tracking-wide">Profile Info</h2>
-                            <p class="text-xs text-gray-500">Update your basic profile information such as Email Address, Name.</p>
-                        </div>
+
                         <div class="md:w-2/3 w-full p-5">
                             <div class="p-8 px-16">
                                 <label for="card-holder-name" class="text-sm text-gray-600">Name on Card</label>
