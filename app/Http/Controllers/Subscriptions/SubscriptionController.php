@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class SubscriptionController extends Controller
 {
+
+
+    public function __construct()
+    {
+        $this->middleware(['not.subscribed']);
+    }
+
     public function index(Request $request)
     {
         $plan=Plan::all();

@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class SubscriptionCancelController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['subscribed']);
+    }
+
+
     public function index()
     {
        return view('account.subscriptions.cancel');

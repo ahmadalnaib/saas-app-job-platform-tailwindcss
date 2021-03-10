@@ -7,6 +7,15 @@ use Illuminate\Http\Request;
 
 class SubscriptionResumeController extends Controller
 {
+
+
+
+
+    public function __construct()
+    {
+        $this->middleware(['subscribed']);
+    }
+
 public function index()
 {
     return view('account.subscriptions.resume');
