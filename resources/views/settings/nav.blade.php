@@ -3,11 +3,10 @@
         {{ __('Profile') }}
     </x-responsive-nav-link>
     <x-responsive-nav-link :href="route('security')" :active="request()->routeIs('security')">
-        {{ __('security') }}
+        {{ __('Security') }}
     </x-responsive-nav-link>
-    <x-responsive-nav-link :href="route('billing')" :active="request()->routeIs('billing')">
-        {{ __('billing') }}
-    </x-responsive-nav-link>
+
+
 
 </ul>
 @include('messages.success')
