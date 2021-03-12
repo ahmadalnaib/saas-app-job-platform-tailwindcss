@@ -84,6 +84,10 @@
                             <x-responsive-nav-link :href="route('account.subscriptions.swap')" :active="request()->routeIs('account.subscriptions.swap')">
                                 {{ __('Swap Plans') }}
                             </x-responsive-nav-link>
+
+                                <x-responsive-nav-link :href="route('account.subscriptions.update')" :active="request()->routeIs('account.subscriptions.update')">
+                                    {{ __('Update Card') }}
+                                </x-responsive-nav-link>
                         @endif
 
 
@@ -188,6 +192,10 @@
                     <x-responsive-nav-link :href="route('account.subscriptions.swap')" :active="request()->routeIs('account.subscriptions.swap')">
                         {{ __('Swap Plans') }}
                     </x-responsive-nav-link>
+
+                        <x-responsive-nav-link :href="route('account.subscriptions.update')" :active="request()->routeIs('account.subscriptions.update')">
+                            {{ __('Update Card') }}
+                        </x-responsive-nav-link>
                 @endif
             <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

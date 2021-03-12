@@ -36,9 +36,10 @@
         </div>
 
 
-{{--        <script src="{{ asset('js/billing.js') }}"> </script>--}}
+
 
         <script src="{{ asset('js/app.js') }}" ></script>
+
 
     </body>
 </html>
