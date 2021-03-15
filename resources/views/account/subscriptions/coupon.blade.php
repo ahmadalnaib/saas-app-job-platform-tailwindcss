@@ -17,7 +17,12 @@
                     @csrf
                     <div class="p-8 px-16">
                         <label for="coupon" class="text-sm text-gray-600">Coupon</label>
-                        <input id="coupon" class="mt-2 border-2 border-gray-200 px-3 py-2 block w-full rounded-lg text-base text-gray-900 focus:outline-none focus:border-indigo-500"  type="text"  name="coupon">
+                        <input  id="coupon" class="mt-2 border-2 border-gray-200 px-3 py-2 block w-full rounded-lg text-base text-gray-900 focus:outline-none focus:border-indigo-500"  type="text"  name="coupon">
+                        @error('coupon')
+                        <span class="text-red-800">
+                            {{$message}}
+                        </span>
+                        @enderror
                     </div>
                     <x-button>Apply</x-button>
                 </form>
