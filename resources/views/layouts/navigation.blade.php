@@ -59,6 +59,10 @@
                         <x-responsive-nav-link :href="route('account.subscriptions')" :active="request()->routeIs('account.subscriptions')">
                             {{ __('Subscription') }}
                         </x-responsive-nav-link>
+
+                        <x-responsive-nav-link :href="route('account.subscriptions.coupon')" :active="request()->routeIs('account.subscriptions.coupon')">
+                            {{ __('Coupon') }}
+                        </x-responsive-nav-link>
                         @if(auth()->user()->subscribed())
 
                             @can('cancel',auth()->user()->subscription('default'))
@@ -87,6 +91,10 @@
 
                                 <x-responsive-nav-link :href="route('account.subscriptions.update')" :active="request()->routeIs('account.subscriptions.update')">
                                     {{ __('Update Card') }}
+                                </x-responsive-nav-link>
+
+                                <x-responsive-nav-link :href="route('account.subscriptions.coupon')" :active="request()->routeIs('account.subscriptions.coupon')">
+                                    {{ __('Coupon') }}
                                 </x-responsive-nav-link>
                         @endif
 
@@ -166,6 +174,9 @@
                 <x-responsive-nav-link :href="route('account')" :active="request()->routeIs('account')">
                     {{ __('Account') }}
                 </x-responsive-nav-link>
+                <x-responsive-nav-link :href="route('account.subscriptions.coupon')" :active="request()->routeIs('account.subscriptions.coupon')">
+                    {{ __('Coupon') }}
+                </x-responsive-nav-link>
 
                 @if(auth()->user()->subscribed())
 
@@ -195,6 +206,10 @@
 
                         <x-responsive-nav-link :href="route('account.subscriptions.update')" :active="request()->routeIs('account.subscriptions.update')">
                             {{ __('Update Card') }}
+                        </x-responsive-nav-link>
+
+                        <x-responsive-nav-link :href="route('account.subscriptions.coupon')" :active="request()->routeIs('account.subscriptions.coupon')">
+                            {{ __('Coupon') }}
                         </x-responsive-nav-link>
                 @endif
             <!-- Authentication -->

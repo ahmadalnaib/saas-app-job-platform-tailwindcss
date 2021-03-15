@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Account\AccountController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionCancelController;
+use App\Http\Controllers\Account\Subscriptions\SubscriptionCouponController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionInvoiceController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionResumeController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionSwapController;
@@ -76,6 +77,12 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','pr
 //    update
     Route::get('/update',[SubscriptionUpdateController::class,'index'])->name('account.subscriptions.update');
     Route::post('/update',[SubscriptionUpdateController::class,'store'])->name('account.subscriptions.update');
+
+
+
+//    coupon
+    Route::get('/coupon',[SubscriptionCouponController::class,'index'])->name('account.subscriptions.coupon');
+    Route::post('/coupon',[SubscriptionCouponController::class,'store'])->name('account.subscriptions.coupon');
 });
 
 
