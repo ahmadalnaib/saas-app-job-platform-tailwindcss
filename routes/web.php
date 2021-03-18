@@ -8,7 +8,9 @@ use App\Http\Controllers\Account\Subscriptions\SubscriptionResumeController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionSwapController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionUpdateController;
 use App\Http\Controllers\BillingController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\JobsController;
 use App\Http\Controllers\Subscriptions\PlanController;
 use App\Http\Controllers\Subscriptions\SubscriptionController;
 use Illuminate\Support\Facades\Route;
@@ -28,6 +30,12 @@ use Illuminate\Http\Request;
 Route::get('/', function () {
     return view('home');
 });
+
+//jobs
+Route::get('/jobs',[JobsController::class,'index'])->name('jobs');
+
+//show jobs
+Route::get('/jobs/{id}/{job}',[JobsController::class,'show'])->name('job.show');
 
 //info
 Route::group(['middleware'=>['auth','verified']],function (){
@@ -87,5 +95,11 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','pr
 
 
 
+
+//categories
+Route::group(['middleware'=>['auth','verified']],function (){
+    Route::resource('/categories',CategoryController::class);
+
+});
 
 require __DIR__.'/auth.php';

@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9b27adb1-981b-4b83-8972-fd8a7533c8ca" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Account/Subscriptions/SubscriptionCouponController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Account/Subscriptions/SubscriptionCouponController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/account/subscriptions/coupon.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/account/subscriptions/coupon.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Subscriptions/SubscriptionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Subscriptions/SubscriptionController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/navigation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/partials/nav.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +21,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -191,7 +203,9 @@
       <workItem from="1615368138900" duration="19958000" />
       <workItem from="1615541900391" duration="6415000" />
       <workItem from="1615819127904" duration="106000" />
-      <workItem from="1615819261326" duration="4134000" />
+      <workItem from="1615819261326" duration="9040000" />
+      <workItem from="1615887924616" duration="16475000" />
+      <workItem from="1616064437700" duration="748000" />
     </task>
     <servers />
   </component>

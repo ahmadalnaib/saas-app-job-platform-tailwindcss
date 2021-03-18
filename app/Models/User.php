@@ -54,9 +54,13 @@ class User extends Authenticatable implements MustVerifyEmail
             'stripe_plan',
 
         );
+
     }
 
-
+    public  function jobs()
+    {
+        return $this->hasMany(Job::class);
+    }
 
 
 
