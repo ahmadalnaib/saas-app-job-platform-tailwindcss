@@ -34,7 +34,7 @@
     </div>
 </section>
 
-   <main class="container mx-auto flex max-w-custom">
+   <main class="container mx-auto flex max-w-custom mt-16">
      <div class="w-70 mr-5">
          add category here
      </div>
@@ -62,6 +62,7 @@
                </ul>
 
            </nav>
+
 {{--           filters--}}
            <div class="mt-8">
              <div class="filters flex space-x-6">
@@ -94,7 +95,67 @@
              </div>
            </div>
 
+
+           {{--      jobs  --}}
+
+           <div class="jobs-container space-y-6 my-6">
+               <div class="job-container bg-white rounded-xl flex hover:shadow-md transition duration-150 ease-in cursor-pointer">
+                   <div class="border-r border-gray-100 px-5 py-8">
+                       <div class="text-center">
+                           <div class="font-semibold text-2xl">12</div>
+                           <div class="text-gray-500">Likes</div>
+                       </div>
+                       <div class="mt-8">
+                           <button class="w-20 bg-gray-200 border border-gray-200  font-bold text-xs uppercase rounded-xl transition duration-150 ease-in px-4 py-3">
+                               Like
+                           </button>
+                       </div>
+                   </div>
+
+                   <div class="flex px-2 py-6">
+                       <a href="" class="flex-none">
+                           <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
+                       </a>
+
+                       <div class="mx-4">
+                           <h4 class="text-xl font-semibold">
+                               <a href="#" class="hover:underline">A random job title go here</a>
+                           </h4>
+                           <p class="text-gray-600 mt-3 line-clamp-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias consequatur cumque delectus dicta dolores doloribus earum esse et eum ex excepturi exercitationem explicabo hic id illum impedit inventore, ipsum iste, laboriosam minima necessitatibus neque nulla odit omnis quae quisquam ratione recusandae rem sapiente sequi suscipit totam vel. Alias animi blanditiis eligendi facilis ipsum minima odio, sequi voluptatem. Ab aliquam animi beatae, delectus dignissimos dolore doloribus, explicabo facere facilis harum laudantium magni maiores non numquam obcaecati officiis quam quasi, quia quod quos ratione reprehenderit repudiandae sed similique sit tempore tenetur ut veniam vero voluptas! Assumenda consectetur in officia perferendis vitae!</p>
+
+                           <div class="flex items-center justify-between mt-6">
+                               <div class="flex item-center text-xs font-semibold space-x-2 text-gray-400">
+                                   <div>10 hours ago</div>
+                                   <div>&bull;</div>
+                                   <div>Category one</div>
+                                   <div>&bull;</div>
+                                   <div class="text-gray-900">3 Comments</div>
+                               </div>
+
+                               <div class="flex items-center space-x-2">
+                                   <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
+                                    Open
+                                   </div>
+                                   <button class="relative bg-gray-100 hover:bg-gray-200 rounded-xl h-7 transition duration-150 ease-in py-2 px-4">
+                                       <svg fill="currentColor" width="24" height="6">
+                                           <path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"/>
+                                       </svg>
+
+                                       <ul class="absolute w-44 text-left ml-8 font-semibold bg-white shadow-lg rounded-xl py-3">
+                                         <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Make as Spam</a></li>
+                                           <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Delete Job</a></li>
+                                       </ul>
+                                   </button>
+                               </div>
+
+                           </div>
+                       </div>
+                   </div>
+
+               </div>
+           </div>
        </div>
+
    </main>
 
 @endsection
