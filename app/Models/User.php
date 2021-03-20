@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Presenters\SubscriptionPresenter;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -62,6 +63,16 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->hasMany(Job::class);
     }
 
+
+    public function presentSubscription()
+    {
+        if(!$subscription =$this->subscription('default'))
+        {
+            return null;
+
+        }
+        return  new SubscriptionPresenter($subscription->asStripeSubscription());
+    }
 
 
 }

@@ -34,5 +34,67 @@
     </div>
 </section>
 
+   <main class="container mx-auto flex max-w-custom">
+     <div class="w-70 mr-5">
+         add category here
+     </div>
+       <div class="w-175">
+           <nav class="flex items-center justify-between text-xs ">
+            <ul class="flex uppercase font-semibold space-x-10 border-b-4 pb-3">
+                <li><a class="border-b-4 pb-3 border-blue-500" href="#">All Jobs (87)</a></li>
+                <li>
+                    <a class="border-b-4 pb-3 text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-500"
+                       href="#">Considering</a>
+                </li>
+
+                <li>
+                    <a class="border-b-4 pb-3 text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-500"
+                       href="#">In Progress (1)</a>
+                </li>
+            </ul>
+
+               <ul class="flex uppercase font-semibold space-x-10 border-b-4 pb-3">
+                   <li><a class="border-b-4 pb-3 border-blue-500" href="#">Implemented (17)</a></li>
+                   <li>
+                       <a class="border-b-4 pb-3 text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue-500"
+                          href="#">Closed (55)</a>
+                   </li>
+               </ul>
+
+           </nav>
+{{--           filters--}}
+           <div class="mt-8">
+             <div class="filters flex space-x-6">
+                 <div class="w-1/3">
+                     <select name="category" id="category" class="w-full rounded-xl px-4 py-2 border-none">
+                          <option value="category one">Category one</option>
+                         <option value="category two">Category two</option>
+                         <option value="category three">Category three</option>
+                         <option value="category four">Category four</option>
+                     </select>
+                 </div>
+
+                 <div class="w-1/3">
+                     <select name="city" id="city" class="w-full rounded-xl px-4 py-2 border-none">
+                         <option value="city one">City one</option>
+                         <option value="city two">City two</option>
+                         <option value="city three">City three</option>
+                         <option value="city four">City four</option>
+                     </select>
+                 </div>
+                 <div class="w-2/3 relative">
+                     <input type="search" placeholder="Find an Job" class="w-full border-none rounded-xl bg-white px-4 py-2 pl-8 placeholder-gray-900">
+                     <div class="absolute top-0 flex items-center h-full ml-2">
+                         <svg class="w-4 text-gray-700 text-sm" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                         </svg>
+                     </div>
+                 </div>
+
+             </div>
+           </div>
+
+       </div>
+   </main>
 
 @endsection

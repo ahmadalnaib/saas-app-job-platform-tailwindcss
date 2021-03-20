@@ -16,10 +16,10 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('categories.index')" :active="request()->routeIs('categories.index')">
-                        {{ __('categories  ') }}
-                    </x-nav-link>
 
+                    <x-nav-link :href="route('account.subscriptions')" :active="request()->routeIs('account.subscriptions')">
+                        {{ __('Subscription') }}
+                    </x-nav-link>
 
                 </div>
             </div>
@@ -55,9 +55,6 @@
                             {{ __('Plan') }}
                         </x-responsive-nav-link>
 
-                        <x-responsive-nav-link :href="route('account')" :active="request()->routeIs('account')">
-                            {{ __('Account') }}
-                        </x-responsive-nav-link>
 
                         <x-responsive-nav-link :href="route('account.subscriptions')" :active="request()->routeIs('account.subscriptions')">
                             {{ __('Subscription') }}
@@ -66,6 +63,7 @@
                         <x-responsive-nav-link :href="route('account.subscriptions.coupon')" :active="request()->routeIs('account.subscriptions.coupon')">
                             {{ __('Coupon') }}
                         </x-responsive-nav-link>
+
                         @if(auth()->user()->subscribed())
 
                             @can('cancel',auth()->user()->subscription('default'))
@@ -174,9 +172,7 @@
                     {{ __('Plan') }}
                 </x-responsive-nav-link>
 
-                <x-responsive-nav-link :href="route('account')" :active="request()->routeIs('account')">
-                    {{ __('Account') }}
-                </x-responsive-nav-link>
+
                 <x-responsive-nav-link :href="route('account.subscriptions.coupon')" :active="request()->routeIs('account.subscriptions.coupon')">
                     {{ __('Coupon') }}
                 </x-responsive-nav-link>

@@ -18,7 +18,21 @@
                 <p class="text-xs text-gray-500">Update your basic profile information such as Email Address, Name.</p>
             </div>
             <div class="md:w-2/3 w-full p-5">
-   ahmed
+            @if(auth()->user()->subscribed())
+                @if($subscription)
+                <ul>
+                    <li>Plan: {{auth()->user()->plan->title}}</li>
+                    <li>{{$subscription->interval()}}</li>
+                    <li>{{$subscription->amount()}}</li>
+                    @if(auth()->user()->subscription('default')->cancelled())
+                        Ends {{$subscription->cancelAt()}} <a href="{{route('account.subscriptions.resume')}}">Resume</a>
+                        @endif
+                </ul>
+                    @endif
+                @else
+                <p>you dont have a subscriptions</p>
+                @endif
+
             </div>
         </div>
     </div>

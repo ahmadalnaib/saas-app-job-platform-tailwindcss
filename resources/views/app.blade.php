@@ -49,7 +49,7 @@
     {{--    stripe--}}
 
 </head>
-<body>
+<body class="bg-gray-background">
 
 @yield('content')
 

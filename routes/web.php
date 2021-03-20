@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Account\AccountController;
+use App\Http\Controllers\Account\Subscriptions\SubController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionCancelController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionCouponController;
 use App\Http\Controllers\Account\Subscriptions\SubscriptionInvoiceController;
@@ -31,11 +32,6 @@ Route::get('/', function () {
     return view('home');
 });
 
-//jobs
-Route::get('/jobs',[JobsController::class,'index'])->name('jobs');
-
-//show jobs
-Route::get('/jobs/{id}/{job}',[JobsController::class,'show'])->name('job.show');
 
 //info
 Route::group(['middleware'=>['auth','verified']],function (){
@@ -56,16 +52,12 @@ Route::group(['middleware'=>['auth','verified']],function (){
     Route::post('/subscriptions',[SubscriptionController::class,'store'])->name('subscriptions.store');
 });
 
-//account
-Route::group(['middleware'=>['auth','verified'],'namespace'=>'Account','prefix'=>'account'],function (){
 
-    Route::get('/',[AccountController::class,'index'])->name('account');
-});
 
 //sub account
 Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','prefix'=>'subscriptions'],function (){
 //cancel sub
-    Route::get('/account.subscriptions',[\App\Http\Controllers\Account\Subscriptions\SubscriptionController::class,'index'])->name('account.subscriptions');
+    Route::get('/account.subscriptions',[SubController::class,'index'])->name('account.subscriptions');
     Route::get('/cancel',[SubscriptionCancelController::class,'index'])->name('account.subscriptions.cancel');
     Route::post('/cancel',[SubscriptionCancelController::class,'store']);
 //resume sub
@@ -96,10 +88,6 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','pr
 
 
 
-//categories
-Route::group(['middleware'=>['auth','verified']],function (){
-    Route::resource('/categories',CategoryController::class);
 
-});
 
 require __DIR__.'/auth.php';

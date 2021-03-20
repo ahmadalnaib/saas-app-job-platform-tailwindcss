@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\Plan;
 use App\Rules\ValidCoupon;
 use Illuminate\Http\Request;
+use Laravel\Cashier\Exceptions\IncompletePayment;
+use Laravel\Cashier\Exceptions\PaymentActionRequired;
 
 class SubscriptionController extends Controller
 {
@@ -41,9 +43,20 @@ class SubscriptionController extends Controller
           $plan=Plan::where('slug',$request->get('plan','monthly'))
                   ->first();
 
-          $request->user()->newSubscription('default',$plan->stripe_id)
+          try {
+
+
+              $request->user()->newSubscription('default', $plan->stripe_id)
                   ->withCoupon($request->coupon)
                   ->create($request->token);
+          }catch (PaymentActionRequired $e){
+             return  redirect()->route(
+               'cashier.payment',[
+                   $e->payment->id,
+                   'redirect'=>route('account.subscriptions')
+                 ]
+             );
+          }
 
         return back()->with('status','Successfully');
     }
