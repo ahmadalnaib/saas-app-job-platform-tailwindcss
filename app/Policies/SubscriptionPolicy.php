@@ -20,4 +20,5 @@ class SubscriptionPolicy
         return $subscription->cancelled();
     }
 
+
 }

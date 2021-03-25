@@ -32,6 +32,11 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/show', function () {
+    return view('jobs.show');
+});
+
+
 
 //info
 Route::group(['middleware'=>['auth','verified']],function (){
@@ -50,6 +55,9 @@ Route::group(['middleware'=>['auth','verified']],function (){
 
     Route::get('/subscriptions',[SubscriptionController::class,'index'])->name('subscriptions');
     Route::post('/subscriptions',[SubscriptionController::class,'store'])->name('subscriptions.store');
+
+
+
 });
 
 
@@ -84,8 +92,6 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','pr
     Route::get('/coupon',[SubscriptionCouponController::class,'index'])->name('account.subscriptions.coupon');
     Route::post('/coupon',[SubscriptionCouponController::class,'store'])->name('account.subscriptions.coupon');
 });
-
-
 
 
 

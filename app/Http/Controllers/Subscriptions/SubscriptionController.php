@@ -60,4 +60,6 @@ class SubscriptionController extends Controller
 
         return back()->with('status','Successfully');
     }
+
+
 }

@@ -1,7 +1,7 @@
 
 @extends('app')
 
-@section('title','Dundung - A Job platform for Refugee, Built by Refugee')
+@section('title','Dundung - A Job platform for Refugee, Built by Refugees')
 
 @section('content')
 <!-- Google Tag Manager (noscript) -->
@@ -36,7 +36,43 @@
 
    <main class="container mx-auto flex max-w-custom mt-16">
      <div class="w-70 mr-5">
-         add category here
+        <div class="bg-white border-2 border-blue-100 rounded-xl mt-16">
+            <div class="text-center px-6 py-2 pt-6">
+                <h3 class="font-semibold text-base">Add an job</h3>
+            </div>
+            <form action="" method="post" class="space-y-4 px-4 py-6">
+              <div>
+                  <input type="text" class="w-full bg-gray-100 text-sm rounded-xl placeholder-gray-900 px-4 py-2 border-none " placeholder="your job">
+              </div>
+
+                <div>
+                    <select name="category" id="category" class="w-full rounded-xl px-4 py-2 border-none bg-gray-100 text-sm">
+                        <option value="category one">Category one</option>
+                        <option value="category two">Category two</option>
+                        <option value="category three">Category three</option>
+                        <option value="category four">Category four</option>
+                    </select>
+                </div>
+
+                <div>
+                    <textarea placeholder="write the job h" name="job" id="job" cols="30" rows="4" class="w-full bg-gray-100 rounded-xl placeholder-gray-900 text-sm px-4 py-2 border-none"  ></textarea>
+                </div>
+
+                <div class="flex items-center justify-end space-x-3">
+                    <button type="button" class="flex items-center justify-center w-1/2 h-11 text-xs bg-gray-200 font-bold rounded-xl border border-gray-200 hover:bg-gray-200 transition duration-150 ease-in px-6 py-3">
+                        <svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                        </svg>
+                        <span class="ml-1">Attach </span>
+                    </button>
+
+                    <button type="submit" class="flex text-white items-center justify-center w-1/2 h-11 text-xs bg-blue-500 font-bold rounded-xl border border-blue-400 hover:bg-blue-500 transition duration-150 ease-in px-6 py-3">
+
+                        <span class="ml-1">Submit </span>
+                    </button>
+                </div>
+            </form>
+        </div>
      </div>
        <div class="w-175">
            <nav class="flex items-center justify-between text-xs ">
@@ -112,12 +148,15 @@
                        </div>
                    </div>
 
-                   <div class="flex px-2 py-6">
-                       <a href="" class="flex-none">
-                           <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
-                       </a>
+                   <div class="flex flex-1 px-2 py-6">
+                       <div class="float-none">
+                           <a href="" >
+                               <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
+                           </a>
+                       </div>
 
-                       <div class="mx-4">
+
+                       <div class=" w-full mx-4">
                            <h4 class="text-xl font-semibold">
                                <a href="#" class="hover:underline">A random job title go here</a>
                            </h4>
@@ -129,19 +168,19 @@
                                    <div>&bull;</div>
                                    <div>Category one</div>
                                    <div>&bull;</div>
-                                   <div class="text-gray-900">3 Comments</div>
+                                   <div class="text-gray-900">6 Comments</div>
                                </div>
 
                                <div class="flex items-center space-x-2">
                                    <div class="bg-gray-200 text-xs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                                     Open
                                    </div>
-                                   <button class="relative bg-gray-100 hover:bg-gray-200 rounded-xl h-7 transition duration-150 ease-in py-2 px-4">
+                                   <button class="relative bg-gray-100 hover:bg-gray-200 border rounded-xl h-7 transition duration-150 ease-in py-2 px-4">
                                        <svg fill="currentColor" width="24" height="6">
                                            <path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"/>
                                        </svg>
 
-                                       <ul class="absolute w-44 text-left ml-8 font-semibold bg-white shadow-lg rounded-xl py-3">
+                                       <ul class="absolute w-44 text-left ml-4  font-semibold bg-white shadow-lg rounded-xl py-3">
                                          <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Make as Spam</a></li>
                                            <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Delete Job</a></li>
                                        </ul>
