@@ -127,17 +127,90 @@
 {{--button-container--}}
         <div class="buttons-container flex items-center justify-between mt-6">
            <div class="flex items-center space-x-4 ml-6">
-               <button type="button" class="flex text-white w-32 items-center justify-center  h-11 text-xs bg-blue-500 font-bold rounded-xl border border-blue-400 hover:bg-blue-500 transition duration-150 ease-in px-6 py-3">
-                   <span class="ml-1">Reply </span>
-               </button>
+               <div class=" relative">
+                   <button type="button" class="flex text-white w-32 items-center justify-center  h-11 text-xs bg-blue-500 font-bold rounded-xl border border-blue-400 hover:bg-blue-500 transition duration-150 ease-in px-6 py-3">
+                      Reply
+                   </button>
 
-               <button type="button" class="flex items-center justify-center w-36  h-11 text-xs bg-gray-200 font-bold rounded-xl border border-gray-200 hover:bg-gray-200 transition duration-150 ease-in px-6 py-3">
-                   <span class="mr-2">Set Status </span>
-                   <svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                       <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                   </svg>
+                   <div class=" absolute z-10 w-96 text-left font-semibold text-sm bg-white rounded-xl mt-2 shadow-lg">
+                       <form action="" class="space-y-4 px-4 py-5">
+                           <div>
+                               <textarea name="post_comment" id="" cols="30" rows="4" class="w-full text-xs bg-gray-100 rounded-xl placeholder-gray-900 border-none px-4 py-2 " placeholder="Go ahead, don't be shy. Share your thoughts..."></textarea>
+                               <div class="flex items-center space-x-3">
+                                   <button type="button" class="flex text-white w-1/2 items-center justify-center  h-11 text-xs bg-blue-500 font-bold rounded-xl border border-blue-400 hover:bg-blue-500 transition duration-150 ease-in px-6 py-3">
+                                     Post Comment
+                                   </button>
 
-               </button>
+                                   <button type="button" class="flex items-center justify-center w-32 h-11 text-xs bg-gray-200 font-bold rounded-xl border border-gray-200 hover:bg-gray-200 transition duration-150 ease-in px-6 py-3">
+                                       <svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                                       </svg>
+                                       <span class="ml-1">Attach </span>
+                                   </button>
+                               </div>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+
+              <div class="relative">
+                  <button type="button" class=" flex items-center justify-center w-36  h-11 text-xs bg-gray-200 font-bold rounded-xl border border-gray-200 hover:bg-gray-200 transition duration-150 ease-in px-6 py-3">
+                      <span class="mr-2">Set Status </span>
+                      <svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                      </svg>
+                  </button>
+                  <div class="absolute z-20 w-80 text-left font-semibold text-sm bg-white rounded-xl mt-2 shadow-lg">
+                      <form action="" class="space-y-4 px-4 py-6">
+                    <div class="space-y-2">
+                        <label class="inline-flex items-center">
+                            <input type="radio" checked="" class="bg-gray-200 text-blue-500 border-none"  name="status" value="1">
+                            <span class="ml-2">Considering</span>
+                        </label>
+                    </div>
+                          <div>
+                              <label class="inline-flex items-center">
+                                  <input type="radio" checked="" class="bg-gray-200 text-yellow-500 border-none" name="status" value="1">
+                                  <span class="ml-2">In progress</span>
+                              </label>
+                          </div>
+                          <div>
+                              <label class="inline-flex items-center">
+                                  <input type="radio" checked="" class="bg-gray-200 text-green-500 border-none" name="status" value="1">
+                                  <span class="ml-2">Implemented</span>
+                              </label>
+                          </div>
+                          <div>
+                              <label class="inline-flex items-center">
+                                  <input type="radio" checked="" class="bg-gray-200 text-red-500 border-none" name="status" value="3">
+                                  <span class="ml-2">Closed</span>
+                              </label>
+                          </div>
+
+                          <div>
+                              <textarea name="post_comment" id="" cols="30" rows="4" class="w-full text-xs bg-gray-100 rounded-xl placeholder-gray-900 border-none px-4 py-2 " placeholder="Add an update comment (optional)..."></textarea>
+                              <div class="flex items-center space-x-3">
+                                  <button type="button" class="flex text-white w-1/2 items-center justify-center  h-11 text-xs bg-blue-500 font-bold rounded-xl border border-blue-400 hover:bg-blue-500 transition duration-150 ease-in px-6 py-3">
+                                      Update
+                                  </button>
+
+                                  <button type="button" class="flex items-center justify-center w-32 h-11 text-xs bg-gray-200 font-bold rounded-xl border border-gray-200 hover:bg-gray-200 transition duration-150 ease-in px-6 py-3">
+                                      <svg class="w-4 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+                                      </svg>
+                                      <span class="ml-1">Attach </span>
+                                  </button>
+                              </div>
+                          </div>
+                          <div>
+                              <label class="inline-flex items-center">
+                                  <input type="checkbox" name="notify" checked="" >
+                                  <span class="ml-2">Notify all voters</span>
+                              </label>
+                          </div>
+                      </form>
+                  </div>
+              </div>
            </div>
             <div class="flex items-center space-x-3 ">
                 <div class="bg-white font-semibold text-center rounded-xl px-3 py-2">
@@ -147,15 +220,14 @@
 
                 <button type="button" class=" w-32  h-11 uppercase text-xs bg-gray-200 font-bold rounded-xl border border-gray-200 hover:bg-gray-200 transition duration-150 ease-in px-6 py-3">
                     <span class="mr-2">Vote </span>
-
                 </button>
             </div>
         </div>
 
 
 {{--        comments--}}
-        <div class="comments-container relative space-y-6 ml-24 my-8 mt-1 pt-4">
-            <div class="comment-container relative bg-white rounded-xl flex  ">
+        <div class="comments-container space-y-6 ml-24 my-8 mt-1 pt-4">
+            <div class="comment-container  bg-white rounded-xl flex  ">
 
                 <div class="flex flex-1 px-4 py-6">
                     <div class="float-none">
@@ -197,7 +269,7 @@
                 </div>
 
             </div>
-            <div class="is-admin comment-container relative bg-white rounded-xl flex  ">
+            <div class=" comment-container bg-white rounded-xl flex  ">
 
                 <div class="flex flex-1 px-4 py-6">
                     <div class="float-none">
@@ -242,7 +314,7 @@
                 </div>
 
             </div>
-            <div class="comment-container relative bg-white rounded-xl flex  ">
+            <div class="comment-container  bg-white rounded-xl flex  ">
 
                 <div class="flex flex-1 px-4 py-6">
                     <div class="float-none">

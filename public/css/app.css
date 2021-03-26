@@ -32188,7 +32188,7 @@ select {
   content: '';
   width: 23px;
   height: 5px;
-  background: #f7f8fc;
+  background: #78909c;
   left: -40px;
 }
 
@@ -32200,7 +32200,7 @@ select {
   content: '';
   width: 5px;
   height: calc(100% - 60px);
-  background: #f7f8fc;
+  background:#78909c;
 }
 
 .is-admin::before {
