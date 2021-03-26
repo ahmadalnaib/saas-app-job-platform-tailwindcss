@@ -5,6 +5,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/resources/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/jobs/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/jobs/show.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +219,7 @@
       <workItem from="1616589642637" duration="192000" />
       <workItem from="1616590290440" duration="679000" />
       <workItem from="1616694831447" duration="5351000" />
-      <workItem from="1616774360020" duration="3204000" />
+      <workItem from="1616774360020" duration="6325000" />
     </task>
     <servers />
   </component>

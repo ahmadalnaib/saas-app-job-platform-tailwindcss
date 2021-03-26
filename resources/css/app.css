@@ -8,3 +8,6 @@
     @apply border-indigo-600;
 }
 
+[x-cloak] {
+    display: none !important;
+}
