@@ -22,6 +22,10 @@
                     </x-nav-link>
 
 
+                    <x-nav-link :href="route('job.create')" :active="request()->routeIs('job.create')">
+                        {{ __('Create Job') }}
+                    </x-nav-link>
+
 
                 </div>
             </div>
@@ -86,6 +90,8 @@
                             <x-responsive-nav-link :href="route('account.subscriptions.invoices')" :active="request()->routeIs('account.subscriptions.invoices')">
                                 {{ __('Invoices') }}
                             </x-responsive-nav-link>
+
+
 
 
                             <x-responsive-nav-link :href="route('account.subscriptions.swap')" :active="request()->routeIs('account.subscriptions.swap')">

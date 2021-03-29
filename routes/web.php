@@ -11,6 +11,7 @@ use App\Http\Controllers\Account\Subscriptions\SubscriptionUpdateController;
 use App\Http\Controllers\BillingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\Job\JobController;
 use App\Http\Controllers\JobsController;
 use App\Http\Controllers\Subscriptions\PlanController;
 use App\Http\Controllers\Subscriptions\SubscriptionController;
@@ -91,6 +92,16 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','pr
 //    coupon
     Route::get('/coupon',[SubscriptionCouponController::class,'index'])->name('account.subscriptions.coupon');
     Route::post('/coupon',[SubscriptionCouponController::class,'store'])->name('account.subscriptions.coupon');
+
+
+
+//    create job
+    Route::get('/job',[JobController::class,'index'])->name('job.index');
+    Route::get('/create',[JobController::class,'create'])->name('job.create');
+    Route::get('/jobs/{job:slug}',[JobController::class,'show'])->name('job.show');
+
+
+
 });
 
 

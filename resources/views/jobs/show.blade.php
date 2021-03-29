@@ -86,15 +86,15 @@
 
                     <div class=" w-full mx-4">
                         <h4 class="text-xl font-semibold">
-                            <a href="#" class="hover:underline">A random job title go here</a>
+                            <a href="#" class="hover:underline">{{$job->title}}</a>
                         </h4>
-                        <p class="text-gray-600 mt-3 line-clamp-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias consequatur cumque delectus dicta dolores doloribus earum esse et eum ex excepturi exercitationem explicabo hic id illum impedit inventore, ipsum iste, laboriosam minima necessitatibus neque nulla odit omnis quae quisquam ratione recusandae rem sapiente sequi suscipit totam vel. Alias animi blanditiis eligendi facilis ipsum minima odio, sequi voluptatem. Ab aliquam animi beatae, delectus dignissimos dolore doloribus, explicabo facere facilis harum laudantium magni maiores non numquam obcaecati officiis quam quasi, quia quod quos ratione reprehenderit repudiandae sed similique sit tempore tenetur ut veniam vero voluptas! Assumenda consectetur in officia perferendis vitae!</p>
+                        <p class="text-gray-600 mt-3 line-clamp-3">{{$job->description}}</p>
 
                         <div class="flex flex-col md:flex-row md:items-center justify-between mt-6">
                             <div class="flex item-center text-xs font-semibold space-x-2 text-gray-400">
-                                <div class="font-bold text-gray-900">Ahmed</div>
+                                <div class="font-bold text-gray-900">{{$job->user->name}}</div>
                                 <div>&bull;</div>
-                                <div>10 hours ago</div>
+                                <div>{{$job->created_at->diffForHumans()}}</div>
                                 <div>&bull;</div>
                                 <div>Category one</div>
                                 <div>&bull;</div>
