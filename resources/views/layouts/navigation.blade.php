@@ -22,8 +22,8 @@
                     </x-nav-link>
 
 
-                    <x-nav-link :href="route('job.create')" :active="request()->routeIs('job.create')">
-                        {{ __('Create Job') }}
+                    <x-nav-link :href="route('job.index')" :active="request()->routeIs('job.index')">
+                        {{ __(' Add Jobs') }}
                     </x-nav-link>
 
 

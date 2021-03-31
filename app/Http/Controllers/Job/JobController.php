@@ -10,15 +10,12 @@ class JobController extends Controller
 {
     public function index()
     {
-        $jobs=Job::simplePaginate(1);
+        $jobs=Job::simplePaginate(8);
         return view('jobs.index',compact('jobs'));
 
     }
 
-    public function create()
-    {
-        return view('jobs.create');
-    }
+
 
     public  function show(Job $job)
     {

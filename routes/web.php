@@ -33,9 +33,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/show', function () {
-    return view('jobs.show');
-});
+
 
 
 
@@ -95,16 +93,15 @@ Route::group(['middleware'=>['auth','verified'],'namespace'=>'Subscriptions','pr
 
 
 
-//    create job
-    Route::get('/job',[JobController::class,'index'])->name('job.index');
-    Route::get('/create',[JobController::class,'create'])->name('job.create');
-    Route::get('/jobs/{job:slug}',[JobController::class,'show'])->name('job.show');
+//
 
 
 
 });
 
 
-
+//create job
+    Route::get('/addjob',[JobController::class,'index'])->name('job.index');
+    Route::get('/jobs/{job:slug}',[JobController::class,'show'])->name('job.show');
 
 require __DIR__.'/auth.php';
