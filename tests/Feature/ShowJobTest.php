@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\Category;
 use App\Models\Job;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
@@ -19,8 +20,12 @@ class ShowJobTest extends TestCase
     public function test_single_job_shows_correctly_on_the_show_page()
     {
 
+
+        $categoryOne=Category::factory()->create(['name'=>'jobgfg']);
+
         $job=Job::factory()->create([
             'title'=>'job one',
+            'category_id'=>$categoryOne->id,
             'description'=>'one',
         ]);
 
@@ -28,6 +33,7 @@ class ShowJobTest extends TestCase
 
         $response->assertSuccessful();
         $response->assertSee($job->title);
+        $response->assertSee($categoryOne->name);
         $response->assertSee($job->description);
 
 
@@ -37,6 +43,8 @@ class ShowJobTest extends TestCase
     public function test_all_jobs_shows_correctly_on_the_add_job_page()
     {
 
+        $categoryOne=Category::factory()->create(['name'=>'job 1']);
+
         $job=Job::factory()->create([
             'title'=>'job one',
             'description'=>'one',
@@ -44,7 +52,7 @@ class ShowJobTest extends TestCase
 
         $response=$this->get(route('job.index'));
 
-        $response->assertSuccessful();
+       $response->assertSuccessful();
         $response->assertSee($job->title);
         $response->assertSee($job->description);
 

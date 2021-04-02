@@ -10,8 +10,10 @@ class JobController extends Controller
 {
     public function index()
     {
-        $jobs=Job::simplePaginate(8);
-        return view('jobs.index',compact('jobs'));
+
+    $jobs=Job::with('user','category')->latest()->simplePaginate(8);
+    return view('jobs.index',compact('jobs'));
+
 
     }
 

@@ -96,7 +96,7 @@
                                 <div>&bull;</div>
                                 <div>{{$job->created_at->diffForHumans()}}</div>
                                 <div>&bull;</div>
-                                <div>Category one</div>
+                                <div>{{$job->category->name}}</div>
                                 <div>&bull;</div>
                                 <div class="text-gray-900">3 Comments</div>
                             </div>

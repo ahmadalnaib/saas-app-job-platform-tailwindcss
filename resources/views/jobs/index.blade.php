@@ -140,7 +140,7 @@
                                 <div class="flex item-center text-xs font-semibold space-x-2 text-gray-400">
                                     <div>{{$job->created_at->diffForHumans()}}</div>
                                     <div>&bull;</div>
-                                    <div>Category one</div>
+                                    <div>{{$job->category->name}}</div>
                                     <div>&bull;</div>
                                     <div class="text-gray-900">6 Comments</div>
                                 </div>
