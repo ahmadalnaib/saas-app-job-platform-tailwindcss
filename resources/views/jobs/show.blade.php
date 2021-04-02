@@ -77,9 +77,9 @@
 
 
                 <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
-                    <div class="float-none mx-2 md:mx-4">
+                    <div class="float-none mx-2 md:mx-0">
                         <a href="" >
-                            <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
+                            <img  src="{{$job->user->getAvatar()}}" alt="avatar" class="w-14 h-14 rounded-xl">
                         </a>
                     </div>
 
@@ -241,9 +241,9 @@
             <div class="comment-container  bg-white rounded-xl flex  ">
 
                 <div class="flex flex-col md:flex-row flex-1 px-4 py-6">
-                    <div class="float-none">
+                    <div class="float-none  mx-2 md:mx-0">
                         <a href="" >
-                            <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
+                            <img  src="{{$job->user->getAvatar()}}" alt="avatar" class="w-14 h-14 rounded-xl">
                         </a>
                     </div>
 
@@ -280,93 +280,7 @@
                 </div>
 
             </div>
-            <div class=" comment-container bg-white rounded-xl flex  ">
 
-                <div class="flex flex-1 px-4 py-6">
-                    <div class="float-none">
-                        <a href="" >
-                            <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
-                        </a>
-                        <div class="text-center text-blue-400 uppercase text-xs font-bold">admin</div>
-                    </div>
-
-
-                    <div class=" w-full mx-4">
-                        <h4 class="text-xl font-semibold">
-                            <a href="#" class="hover:underline">A random job title go here</a>
-                        </h4>
-                        <p class="text-gray-600 mt-3 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A alias consequatur cumque delectus dicta dolores doloribus earum esse et eum ex excepturi exercitationem explicabo hic id illum impedit inventore, ipsum iste, laboriosam minima necessitatibus neque nulla odit omnis quae quisquam ratione recusandae rem sapiente sequi suscipit totam vel. Alias animi blanditiis eligendi facilis ipsum minima odio, sequi voluptatem. Ab aliquam animi beatae, delectus dignissimos dolore doloribus, explicabo facere facilis harum laudantium magni maiores non numquam obcaecati officiis quam quasi, quia quod quos ratione reprehenderit repudiandae sed similique sit tempore tenetur ut veniam vero voluptas! Assumenda consectetur in officia perferendis vitae!</p>
-
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex item-center text-xs font-semibold space-x-2 text-gray-400">
-                                <div class="font-bold text-blue-400">Ahmed</div>
-                                <div>&bull;</div>
-                                <div>10 hours ago</div>
-                                <div>&bull;</div>
-
-                            </div>
-
-                            <div class="flex items-center space-x-2">
-
-                                <button class="relative bg-gray-100 hover:bg-gray-200 border rounded-xl h-7 transition duration-150 ease-in py-2 px-4">
-                                    <svg fill="currentColor" width="24" height="6">
-                                        <path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"/>
-                                    </svg>
-
-                                    <ul class="absolute hidden w-44 text-left ml-4  font-semibold bg-white shadow-lg rounded-xl py-3">
-                                        <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Make as Spam</a></li>
-                                        <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Delete Job</a></li>
-                                    </ul>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="comment-container  bg-white rounded-xl flex  ">
-
-                <div class="flex flex-1 px-4 py-6">
-                    <div class="float-none">
-                        <a href="" >
-                            <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
-                        </a>
-                    </div>
-
-
-                    <div class=" w-full mx-4">
-
-                        <p class="text-gray-600 mt-3 ">um impedit inventore, ipsum iste, laboriosam minima necessitatibus neque nulla odit omnis quae quisquam ratione recusandae rem sapiente sequi suscipit totam vel. Alias animi blanditiis eligendi facilis ipsum minima odio, sequi voluptatem. Ab aliquam animi beatae, delectus dignissimos dolore doloribus, explicabo facere facilis harum laudantium magni maiores non numquam obcaecati officiis quam quasi, quia quod quos ratione reprehenderit repudiandae sed similique sit tempore tenetur ut veniam vero voluptas! Assumenda consectetur in officia perferendis vitae!</p>
-
-                        <div class="flex items-center justify-between mt-6">
-                            <div class="flex item-center text-xs font-semibold space-x-2 text-gray-400">
-                                <div class="font-bold text-gray-900">Ahmed</div>
-                                <div>&bull;</div>
-                                <div>10 hours ago</div>
-                                <div>&bull;</div>
-
-                            </div>
-
-                            <div class="flex items-center space-x-2">
-
-                                <button class="relative bg-gray-100 hover:bg-gray-200 border rounded-xl h-7 transition duration-150 ease-in py-2 px-4">
-                                    <svg fill="currentColor" width="24" height="6">
-                                        <path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"/>
-                                    </svg>
-
-                                    <ul class="absolute hidden w-44 text-left ml-4  font-semibold bg-white shadow-lg rounded-xl py-3">
-                                        <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Make as Spam</a></li>
-                                        <li><a class="hover:bg-gray-100 block transition duration-150 ease-in px-5 py-3" href="">Delete Job</a></li>
-                                    </ul>
-                                </button>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 

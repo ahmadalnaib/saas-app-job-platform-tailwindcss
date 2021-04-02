@@ -109,7 +109,7 @@
 
             <div class="jobs-container space-y-6 my-6">
                 @foreach($jobs as $job)
-                <div class="job-container bg-white rounded-xl flex hover:shadow-md transition duration-150 ease-in cursor-pointer">
+                <div   class="job-container bg-white rounded-xl flex hover:shadow-md transition duration-150 ease-in cursor-pointer">
                     <div class="hidden md:block border-r border-gray-100 px-5 py-8">
                         <div class="text-center">
                             <div class="font-semibold text-2xl">12</div>
@@ -123,9 +123,9 @@
                     </div>
 
                     <div class="flex flex-col md:flex-row flex-1 px-2 py-6">
-                        <div class="float-none md:mx-4 mx-2 md:mx-0">
+                        <div class="float-none  mx-2 md:mx-0">
                             <a href="" >
-                                <img  src="#" alt="avatar" class="w-full h-14 rounded-xl">
+                                <img  src="{{$job->user->getAvatar()}}" alt="avatar" class="w-14 h-14 rounded-xl">
                             </a>
                         </div>
 

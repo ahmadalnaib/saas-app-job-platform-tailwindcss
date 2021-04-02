@@ -75,4 +75,25 @@ class User extends Authenticatable implements MustVerifyEmail
     }
 
 
+    public function getAvatar()
+    {
+        $firstChar=$this->email[0];
+
+        if(is_numeric($firstChar)){
+            $intToUse=ord(strtolower($firstChar))-21;
+        } else{
+            $intToUse=ord(strtolower($firstChar))-96;
+        }
+
+//        $randomInt=rand(1,36);
+
+        return 'https://www.gravatar.com/avatar/'
+            .md5($this->email)
+            .'?s=200'
+            .'&d=https://s3.amazonaws.com/laracasts/images/forum/avatars/default-avatar-'
+            .$intToUse
+            .'.png';
+    }
+
+
 }
